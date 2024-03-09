@@ -11,7 +11,7 @@ app.use(cors(
     {
         origin: ["https://aryashanish.netlify.app"],
         methods: ["POST", "GET"],
-        credentials: true
+        credentials: true 
     }
 ));
 app.use(express.json());
