@@ -28,14 +28,14 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    const response = await fetch("https://portfolio-website-backend-lemon.vercel.app/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    axios.post("http://localhost:5000/contact", formDetails)
+    // const response = await fetch("https://portfolio-website-backend-lemon.vercel.app/contact", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json;charset=utf-8",
+    //   },
+    //   body: JSON.stringify(formDetails),
+    // });
+    axios.post("https://portfolio-website-backend-lemon.vercel.app/contact", formDetails)
       .then((result) => {
         setButtonText("Send");
         setStatus({ succes: true, message: 'Message sent successfully' });
